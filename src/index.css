@@ -1,0 +1,507 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.woff2') format('woff2'),
+      url('./fonts/Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.woff2') format('woff2'),
+      url('./fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  background-color: #E5E5E5;
+}
+
+.title > button{
+  margin-left:auto;
+}
+
+.titleBar{
+  background-color: #fff;;
+}
+
+.titleBar > div{
+  height:40px;
+  padding: 4px 16px;
+  display:flex;
+  align-items:center;
+  font-family: Inter;
+}
+
+.titleLogo{
+  font-size:14px;
+  line-height:32px;
+  font-weight:600;
+  color:#BDBDBD;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.titleText{
+  color:#000;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.strongButton{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 2px;
+  width: 98px;
+  height: 32px;
+  background: #F5222D;
+  border-radius: 4px;
+  color:#fff;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  border:0;
+}
+
+.backButton{
+  display:flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.65);
+  margin-right:8px;
+}
+
+.backArrow{
+  height:15.56px;
+  width:16px;
+  background-image: url('./icons/BackArrow.svg');
+  margin-right:8px;
+}
+
+.content{
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.searchContainer{
+  height:40px;
+  padding: 4px 16px;
+  display:flex;
+  align-items:center;
+  background-color: #fff;
+  margin: 12px 0px;
+}
+
+.searchContainer > input{
+  border: 1px solid #D9D9D9;
+  padding: 8px 12px;
+  border-radius:4px;
+}
+
+.searchResultsTitle{
+  display:none;
+}
+
+.itemContainer{
+  display:flex;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.65);
+  font-family:Roboto;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.projectName{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.creationDate{
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.assignedTo{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  display:flex;
+  align-items: center;
+  margin-top:4px;
+}
+
+.assignedTo>img{
+  margin-right:9.19px;
+  display:inline-block;
+  width:24px;
+  height:24px;
+  border-radius: 100%;
+}
+
+.projectManager, .status{
+  display:none;
+}
+
+.action{
+  height:18px;
+  width:4px;
+  background-image: url('./icons/Dots.svg');
+  margin-left:auto;
+  margin-top:7px;
+  margin-right:10px;
+}
+
+.pagination{
+  display:flex;
+  align-self:center;
+  font-family: Roboto;
+  margin-top:16px;
+}
+
+.pagination > div{
+  margin: 0 7px;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.menu{
+  display:none;
+  width:154px;
+  background-color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #262626;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menuTriangle{
+  position:absolute;
+  right:15px;
+  top:-5px;
+  height:0;
+  width:0;
+  padding:0 !important;
+  border-bottom:6px solid #fff !important;
+  border-left: 6px solid transparent !important;
+  border-right: 6px solid transparent !important;
+}
+
+.menu > div{
+  padding: 9px 18px;
+  border-bottom: 1px solid #D9D9D9;
+  display: flex;
+  align-items: center;
+}
+
+.menuOption:hover{
+  background-color: rgb(173, 172, 172);
+}
+
+.deleteIcon{
+  height:13.33px;
+  width:13.33px;
+  background-image: url('./icons/DeleteIcon.svg');
+  margin-right:13.33px;
+}
+
+.editIcon{
+  height:12.6px;
+  width:12.6px;
+  background-image: url('./icons/EditIcon.svg');
+  margin-right:13.4px;
+}
+
+.modal{
+  background-color: #fff;
+  border-radius:4px;
+  padding:10px;
+  width:250px;
+  height:104px;
+  margin-left:-125px;
+  margin-top:-52px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  box-shadow: -9px 2px 51px -12px rgba(0,0,0,0.75);
+  top:50%;
+  left:50%;
+  font-family: Roboto;
+  color:#7a7a7a;
+  font-size:14px;
+}
+
+.modal > p{
+  text-align: center;
+}
+
+.modalButtons{
+  display: flex;
+  width:100px;
+}
+
+.modalButtons > button{
+  appearance:none;
+  background-color: #BDBDBD;
+  color:#fff;
+  border-radius: 4px;
+  border:0;
+  padding:4px 10px;
+}
+
+.modalButtons > button:last-child{
+  margin-left:auto;
+}
+
+form{
+  display:flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top:16px;
+  padding:32px 16px;
+}
+
+label{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+input[type="text"], select{
+  appearance: none;
+  box-sizing: border-box;
+  height:40px;
+  border: 1px solid #D9D9D9;
+  padding: 8px 12px;
+  border-radius:4px;
+  background-color: transparent;
+  width:100%;
+}
+
+.select{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+}
+
+.selectWrapper{
+  width:100%;
+  position:relative;
+  height:40px;
+}
+
+input[type="text"], .selectWrapper{
+  margin-bottom:16px;
+}
+
+select{
+  position:absolute;
+  z-index: 2;
+}
+
+.selectArrow{
+  background-image: url('./icons/SelectArrow.svg');
+  position:absolute;
+  top:18px;
+  right:14.82px;
+  z-index:1;
+  width:7px;
+  height:3.89px;
+}
+
+@media (min-width:1441px){
+  .content{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .titleBar > div{
+    padding:12px 48px;
+  }
+
+  .titleText{
+    font-size: 20px;
+  }
+
+  .strongButton{
+    font-size:16px;
+    line-height:24px;
+    width:134px;
+    height:40px;
+    padding: 8px 16px;
+  }
+
+  .searchContainer{
+    margin:32px 48px;
+    height:60px;
+    border-radius:4px;
+  }
+
+  .searchContainer > input{
+    font-size: 16px;
+  }
+
+  .searchResultsTitle{
+    display:flex;
+    padding:19px 24px;
+    background-color: #fafafa;
+    margin:0 48px;
+    box-shadow: inset 0px -1px 0px #D9D9D9;
+    border-radius: 4px 4px 0 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .searchResultsTitle > div:nth-child(1){
+    width:26.67%;
+  }
+  .searchResultsTitle > div:nth-child(2){
+    width:21.43%;
+  }
+  .searchResultsTitle > div:nth-child(3){
+    width:24.84%;
+  }
+  .searchResultsTitle > div:nth-child(4){
+    width:14.52%;
+  }
+  .searchResultsTitle > div:nth-child(5){
+    width:5.96%;
+  }
+
+  .itemContainer{
+    margin: 0 48px;
+    padding: 10px 24px;
+  }
+
+  .itemSubContainer{
+    width:87.46%;
+    display:flex;
+    align-items:center;
+  }
+
+  .projectInfo{
+    width:30.49%;
+  }
+
+  .projectManager{
+    display:flex;
+    width:24.5%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .assignedTo{
+    width:28.4%;
+  }
+
+  .status{
+    display:block;
+    width:16.6%;
+  }
+
+  .action{
+    margin-left:11px;
+  }
+
+  .projectName{
+    line-height:22px;
+  }
+
+  .creationDate{
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .pmInitials{
+    width:24px;
+    height:24px;
+    border-radius:100%;
+    background-color:#FFE0B2;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 20px;
+    color:#CA4A02;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:8.3px;
+  }
+
+  .assignedTo{
+    font-size:14px;
+  }
+
+  .status{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 1px 8px;
+    width: fit-content;
+    height: 22px;
+    background: #F5F5F5;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+  }
+
+  form{
+    width:49.55%;
+    align-self:center;
+    padding:32px 40px;
+    margin-top:24px;
+  }
+
+  input[type="text"], .selectWrapper {
+    margin-bottom: 24px;
+  }
+
+  select{
+    font-family:Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+  }
+
+  .pagination{
+    margin-top:24px;
+  }
+
+  .pagination > div{
+    font-size:14px;
+  }
+
+}
