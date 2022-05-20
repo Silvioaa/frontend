@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { editProject, createProject } from "../redux/actions";
-import { useNavigate } from "react-router-dom";
 
 
 const Form = ({isEdit, id}) => {
@@ -23,7 +22,6 @@ const Form = ({isEdit, id}) => {
     const employeesToAssign = useSelector(state => state.employeesToAssign);
     const statuses = useSelector(state => state.statuses);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     function handleChange(e){
         setFieldsToModify({...fieldsToModify,[e.target.id]:e.target.value})

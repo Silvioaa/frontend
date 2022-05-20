@@ -1,4 +1,4 @@
-import { CREATE_PROJECT,EDIT_PROJECT, DELETE_PROJECT, CHANGE_PROJECT_FIELDS } from "./actions";
+import { CREATE_PROJECT,EDIT_PROJECT, DELETE_PROJECT } from "./actions";
 
 const blankFields = {
     creationDate:"",

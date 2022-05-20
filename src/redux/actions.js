@@ -1,7 +1,6 @@
 export const CREATE_PROJECT = "CREATE_PROJECT";
 export const EDIT_PROJECT = "EDIT_PROJECT";
 export const DELETE_PROJECT = "DELETE_PROJECT";
-export const CHANGE_PROJECT_FIELDS = "CHANGE_PROJECT_FIELDS";
 
 export const createProject = (newProject) => {
     return {
