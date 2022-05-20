@@ -122,7 +122,7 @@ const ListResults = () => {
                                     {item.projectManager}
                                 </div>
                                 <div className="assignedTo">
-                                    <img src={require(String.raw`${item.assignedToImage}`)}/>
+                                    <img src={item.assignedToImage}/>
                                     {item.assignedTo}
                                 </div>
                                 <div className="status">{item.status}</div>
